@@ -1,5 +1,10 @@
 nav {
   display: flex;
+  background-color: black;
+}
+
+.logo img {
+  width: 50%;
 }
 
 nav ul {
@@ -11,9 +16,9 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 nav a:visited {
-  color: black;
+  color: white;
 }
