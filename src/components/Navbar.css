@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:visited {
+  color: black;
+}
