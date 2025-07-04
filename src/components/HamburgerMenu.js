@@ -1,25 +1,31 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./HambrgerMenu.css";
 
-const hamMenu = document.querySelector(".ham-menu");
+export default function HambrgerMenu({ items }) {
+  const hamRef = useRef();
+  const menuRef = useRef();
 
-const offScreenMenu = document.querySelector(".off-screen-menu");
+  const toggleMenu = () => {
+    hamRef.current.classList.toggle("active");
+    menuRef.current.classList.toggle("active");
+  };
 
-export default function HambrgerMenu({ itmes }) {
-  hamMenu.addEventListener("click", () => {
-    hamMenu.classList.toggle("active");
-    offScreenMenu.classList.toggle("active");
-  });
   return (
     <>
-      <div className="ham-menu">
+      <div className="ham-menu" ref={hamRef} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div className="off-screen-menu">
-        {itmes.map(({ label, path }) => (
-          <Link key={path} to={path} className="ham-itme">
+      <div className="off-screen-menu" ref={menuRef}>
+        <div className="close-button" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+        </div>
+        <div className="custom-divider"></div>
+        {items.map(({ label, path }) => (
+          <Link key={path} to={path} className="ham-item">
             {label}
           </Link>
         ))}

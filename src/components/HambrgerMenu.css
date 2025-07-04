@@ -2,21 +2,60 @@
   background-color: black;
   height: 100vh;
   width: 100%;
-  max-width: 450px;
+  max-width: 300px;
   position: fixed;
   top: 0;
   right: -450px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: flex-end;
-  font-size: 3rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: flex-start;
+  padding: 75px 25px;
+  font-size: 15px;
+  gap: 20px;
   transition: 0.3s ease;
 }
 
 .off-screen-menu.active {
   right: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.close-button span {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  top: 125%;
+  left: 0;
+  border-radius: 2px;
+  transition: 0.2s ease;
+}
+
+.close-button span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close-button span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.custom-divider {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin: 20px 0;
+  opacity: 0.3;
 }
 
 .ham-menu {
@@ -27,15 +66,14 @@
 }
 
 .ham-menu span {
-  height: 5px;
-  width: 100%;
+  height: 2px;
+  width: 80%;
   background-color: white;
   border-radius: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.3s ease;
 }
 
 .ham-menu span:nth-child(1) {
@@ -44,18 +82,4 @@
 
 .ham-menu span:nth-child(3) {
   top: 75%;
-}
-
-.ham-menu.active span:nth-child(1) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.ham-menu.ham-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.ham-menu.active span:nth-child(3) {
-  top: 50%;
-  transform: translate(-50%, 50%) rotate(-45deg);
 }

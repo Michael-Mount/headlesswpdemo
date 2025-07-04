@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
+import HambrgerMenu from "./HamburgerMenu";
 import "./Navbar.css";
 
 const logo =
@@ -14,6 +15,12 @@ export default function Navbar() {
 
   const sceneLinks = [
     { label: "Rhyland Recommends", path: "/rhyland-recomandations" },
+  ];
+
+  const hamLinks = [
+    { label: "Contact & FAQ", path: "/contact" },
+    { label: "Our Story", path: "/our-story" },
+    { label: "Employment", path: "/employment" },
   ];
 
   return (
@@ -43,7 +50,7 @@ export default function Navbar() {
           <DropdownMenu title="scene" items={sceneLinks} />
         </li>
         <li>
-          <button>Hambur</button>
+          <HambrgerMenu items={hamLinks} />
         </li>
         <li>
           <button className="book-btn">Book Now</button>
