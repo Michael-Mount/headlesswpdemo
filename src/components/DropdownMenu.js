@@ -5,7 +5,7 @@ export default function DropdownMenu({ title, items }) {
   return (
     <div className="dropdown">
       <Link to="/" className="dropdown-toggle">
-        {title}
+        {title} <i className="arrow up"></i>
       </Link>
       <div className="dropdown-menu">
         {items.map(({ label, path }) => (
