@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
+import DropdownMenu from "./DropdownMenu";
 import "./Navbar.css";
 
 const logo =
   "https://image-tc.galaxy.tf/wipng-60ozpe8mpwggi1hgo0qdy12in/therhyland-logo-wordmark-rgb-white.png?width=500";
 
 export default function Navbar() {
+  const roomsLinks = [
+    { label: "Rooms & Suites", path: "/rooms-suites" },
+    { label: "Amenities", path: "/amenites" },
+    { label: "Packages & Specials", path: "/packages-specials" },
+  ];
+
+  const sceneLinks = [
+    { label: "Rhyland Recommends", path: "/rhyland-recomandations" },
+  ];
+
   return (
     <nav>
       <div className="logo">
@@ -17,7 +28,7 @@ export default function Navbar() {
       </div>
       <ul>
         <li>
-          <Link to="/events">Stay</Link>
+          <DropdownMenu title="stay" items={roomsLinks} />
         </li>
         <li>
           <Link to="/rbar">R Bar</Link>
@@ -29,7 +40,7 @@ export default function Navbar() {
           <Link to="/gather">Gather</Link>
         </li>
         <li>
-          <Link to="/the-scene">Scene</Link>
+          <DropdownMenu title="scene" items={sceneLinks} />
         </li>
         <li>
           <button>Hambur</button>
