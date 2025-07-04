@@ -1,12 +1,19 @@
 nav {
-  background-color: black;
-  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
   font-family: "Golos Text", sans-serif;
   font-size: 15px;
   text-transform: uppercase;
-  position: sticky;
-  top: 0;
 }
+
+nav.scrolled {
+  background-color: rgb(0, 0, 0);
+}
+
 .nav-container {
   display: flex;
   justify-content: space-around;
@@ -26,6 +33,10 @@ nav {
   width: 250px;
 }
 
+.logo a:hover {
+  background-color: transparent;
+}
+
 nav ul {
   display: flex;
   width: 80%;
@@ -42,6 +53,11 @@ nav ul li {
 nav a {
   text-decoration: none;
   color: white;
+}
+
+nav a:hover {
+  background-color: black;
+  color: grey;
 }
 
 nav a:visited {

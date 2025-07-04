@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "./DropdownMenu.css";
 
-export default function DropdownMenu({ title, items }) {
+export default function DropdownMenu({ title, titleLink, items }) {
   return (
     <div className="dropdown">
-      <Link to="/" className="dropdown-toggle">
+      <Link to={titleLink} className="dropdown-toggle">
         {title} <i className="arrow up"></i>
       </Link>
       <div className="dropdown-menu">

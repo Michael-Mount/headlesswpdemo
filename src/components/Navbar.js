@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import HambrgerMenu from "./HamburgerMenu";
@@ -23,8 +24,19 @@ export default function Navbar() {
     { label: "Employment", path: "/employment" },
   ];
 
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav>
+    <nav className={scrollY > 0 ? "scrolled" : ""}>
       <div className="nav-container">
         <div className="logo">
           <Link to="/">
@@ -36,7 +48,7 @@ export default function Navbar() {
         </div>
         <ul>
           <li>
-            <DropdownMenu title="stay" items={roomsLinks} />
+            <DropdownMenu title="stay" titleLink="/" items={roomsLinks} />
           </li>
           <li>
             <Link to="/rbar">R Bar</Link>
@@ -48,7 +60,11 @@ export default function Navbar() {
             <Link to="/gather">Gather</Link>
           </li>
           <li>
-            <DropdownMenu title="scene" items={sceneLinks} />
+            <DropdownMenu
+              title="scene"
+              titleLink="/the-scene"
+              items={sceneLinks}
+            />
           </li>
           <li>
             <HambrgerMenu items={hamLinks} />
