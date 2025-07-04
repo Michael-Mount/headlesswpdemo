@@ -13,6 +13,7 @@ import Packages from "./pages/Packages";
 import RBar from "./pages/RBar";
 import RhylandRec from "./pages/RhylandRec";
 import Rooms from "./pages/Rooms";
+import RoomDetail from "./pages/RoomDetail";
 import Scene from "./pages/Scene";
 import Stay from "./pages/Stay";
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/rbar" element={<RBar />} />
         <Route path="/rhyland-recomandations" element={<RhylandRec />} />
         <Route path="/rooms-suites" element={<Rooms />} />
+        <Route path="/rooms/:slug" element={<RoomDetail />} />
         <Route path="/the-scene" element={<Scene />} />
         <Route path="/stay" element={<Stay />} />
         <Route path="*" element={<div>Page Not Found</div>} />

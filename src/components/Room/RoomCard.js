@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./RoomCard.css";
 
 export default function RoomCard({ room }) {
@@ -10,7 +11,7 @@ export default function RoomCard({ room }) {
       <div className="room-content">
         <h4>{room.title.rendered}</h4>
         <p>{room.acf?.preview_text}</p>
-        <a href="/">View room details</a>
+        <Link to={`/rooms/${room.slug}`}>View Details</Link>
       </div>
 
       <div className="room-rate">
