@@ -1,0 +1,35 @@
+.introContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.introBlock h2 {
+  font-family: "Antic Didone", serif;
+  font-size: 50px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.introBlock .subheader {
+  font-family: "Golos Text", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.introBlock .paragraph {
+  max-width: 700px;
+}
+
+.introBlock .paragraph p {
+  font-size: 14px;
+  font-family: "Golos Text", sans-serif;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: left;
+}
