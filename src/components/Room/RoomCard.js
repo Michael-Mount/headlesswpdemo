@@ -1,0 +1,23 @@
+import "./RoomCard.css";
+
+export default function RoomCard({ room }) {
+  return (
+    <div className="room-card">
+      <div className="room-image">
+        <img src={room.acf?.preview_image} alt={room.title.rendered} />
+      </div>
+
+      <div className="room-content">
+        <h4>{room.title.rendered}</h4>
+        <p>{room.acf?.preview_text}</p>
+        <a href="/">View room details</a>
+      </div>
+
+      <div className="room-rate">
+        <p>Rates from</p>
+        <p className="price">${room.acf.room_price}</p>
+        <button className="card-btn">Book Now</button>
+      </div>
+    </div>
+  );
+}

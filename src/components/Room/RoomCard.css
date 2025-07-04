@@ -1,0 +1,66 @@
+.room-card {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.room-image {
+  flex-shrink: 0;
+  width: 25%;
+  height: auto;
+}
+
+.room-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.room-content {
+  flex: 1;
+}
+
+.room-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 200;
+}
+
+.room-content a {
+  font-family: "Golos Text", sans-serif;
+  text-decoration: underline;
+  color: #626161;
+  font-size: 14px;
+}
+
+.room-content p {
+  margin-bottom: 1rem;
+  font-family: "Golos Text", sans-serif;
+}
+
+.room-rate {
+  padding-left: 2rem;
+  border-left: 1px solid #ccc;
+  text-align: center;
+  font-family: "Golos Text", sans-serif;
+}
+
+.room-rate .price {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card-btn {
+  background: #1c1c1c;
+  color: white;
+  border: none;
+  padding: 15px 60px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 100;
+}
