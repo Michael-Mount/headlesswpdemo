@@ -25,37 +25,39 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="logo">
-        <Link to="/">
-          <img
-            src={logo}
-            alt="The Rhylandhotel logo, with white text saying 'The Rhyland'"
-          />
-        </Link>
+      <div className="nav-container">
+        <div className="logo">
+          <Link to="/">
+            <img
+              src={logo}
+              alt="The Rhylandhotel logo, with white text saying 'The Rhyland'"
+            />
+          </Link>
+        </div>
+        <ul>
+          <li>
+            <DropdownMenu title="stay" items={roomsLinks} />
+          </li>
+          <li>
+            <Link to="/rbar">R Bar</Link>
+          </li>
+          <li>
+            <Link to="/honey-ginger">Honey & Ginger</Link>
+          </li>
+          <li>
+            <Link to="/gather">Gather</Link>
+          </li>
+          <li>
+            <DropdownMenu title="scene" items={sceneLinks} />
+          </li>
+          <li>
+            <HambrgerMenu items={hamLinks} />
+          </li>
+          <li>
+            <button className="book-btn">Book Now</button>
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li>
-          <DropdownMenu title="stay" items={roomsLinks} />
-        </li>
-        <li>
-          <Link to="/rbar">R Bar</Link>
-        </li>
-        <li>
-          <Link to="/honey-ginger">Honey & Ginger</Link>
-        </li>
-        <li>
-          <Link to="/gather">Gather</Link>
-        </li>
-        <li>
-          <DropdownMenu title="scene" items={sceneLinks} />
-        </li>
-        <li>
-          <HambrgerMenu items={hamLinks} />
-        </li>
-        <li>
-          <button className="book-btn">Book Now</button>
-        </li>
-      </ul>
     </nav>
   );
 }
