@@ -1,5 +1,9 @@
 import HeroImage from "../components/HeroImage";
 import IntroTextBlock from "../components/IntroTextBlock";
+import TallImageGallery from "../components/TallImageGallery";
+
+const heroImage =
+  "https://image-tc.galaxy.tf/wijpeg-b6gaf5ztv5a9okah550rlpb5a/37-richouse-king-room.jpg";
 
 const introBlock = [
   { title: "stay with us" },
@@ -14,14 +18,18 @@ const introBlock = [
   },
 ];
 
-const heroImage =
-  "https://image-tc.galaxy.tf/wijpeg-b6gaf5ztv5a9okah550rlpb5a/37-richouse-king-room.jpg";
+const tallImages = [
+  "https://image-tc.galaxy.tf/wipng-51l7wkega4faiclrqmarxd73c/room.png",
+  "https://image-tc.galaxy.tf/wipng-2hk1okwt2958qsgcdvdjxnhkk/untitled-design-3.png",
+  "https://image-tc.galaxy.tf/wipng-2a1j3x4wnlxhwy91trasd3p7k/room.png",
+];
 
 export default function Rooms() {
   return (
     <>
       <HeroImage image={heroImage} content="" />
       <IntroTextBlock content={introBlock} />
+      <TallImageGallery images={tallImages} />
     </>
   );
 }
