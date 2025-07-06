@@ -11,7 +11,7 @@ export default function RoomCard({ room }) {
       <div className="room-content">
         <h4>{room.title.rendered}</h4>
         <p>{room.acf?.preview_text}</p>
-        <Link to={`/rooms/${room.slug}`}>View Details</Link>
+        <Link to={`/rooms/${room.slug}`}>View Room Details</Link>
       </div>
 
       <div className="room-rate">
