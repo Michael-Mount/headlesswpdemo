@@ -8,31 +8,35 @@ const logo =
   "https://image-tc.galaxy.tf/wipng-60ozpe8mpwggi1hgo0qdy12in/therhyland-logo-wordmark-rgb-white.png?width=500";
 
 export default function Navbar() {
+  /* Use to check endpoint */
   const location = useLocation();
   const isRoomDetailPage = matchPath(
     { path: "/rooms/:slug", end: true },
     location.pathname
   );
-
+  /* array of props to send to Dropdown Compoent */
   const roomsLinks = [
     { label: "Rooms & Suites", path: "/rooms-suites" },
     { label: "Amenities", path: "/amenites" },
     { label: "Packages & Specials", path: "/packages-specials" },
   ];
-
+  /* array of props to send to Dropdown Compoent */
   const sceneLinks = [
     { label: "Rhyland Recommends", path: "/rhyland-recomandations" },
   ];
-
+  /* array of props to send to Hamburger Menu Compoent */
   const hamLinks = [
     { label: "Contact & FAQ", path: "/contact" },
     { label: "Our Story", path: "/our-story" },
     { label: "Employment", path: "/employment" },
   ];
 
+  /* useState to track if user has scrolled */
   const [scrollY, setScrollY] = useState(0);
 
+  /* useEffect to trigger scroll animation */
   useEffect(() => {
+    /* If statement to break useEffect and bypass scroll animation if we are on a specfied endpoint */
     if (isRoomDetailPage) return;
 
     const handleScroll = () => {
