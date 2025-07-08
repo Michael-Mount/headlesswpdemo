@@ -10,10 +10,12 @@ const logo =
 export default function Navbar() {
   /* Use to check endpoint */
   const location = useLocation();
+
   const isRoomDetailPage = matchPath(
     { path: "/rooms/:slug", end: true },
     location.pathname
   );
+
   /* array of props to send to Dropdown Compoent */
   const roomsLinks = [
     { label: "Rooms & Suites", path: "/rooms-suites" },
@@ -36,7 +38,6 @@ export default function Navbar() {
 
   /* useEffect to trigger scroll animation */
   useEffect(() => {
-    /* If statement to break useEffect and bypass scroll animation if we are on a specfied endpoint */
     if (isRoomDetailPage) return;
 
     const handleScroll = () => {

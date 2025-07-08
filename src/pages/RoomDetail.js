@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import "./RoomDetail.css";
 
 export default function RoomDetail() {
   const { slug } = useParams();
@@ -17,15 +18,21 @@ export default function RoomDetail() {
 
   return (
     <>
-      {!room ? (
-        <p>Loading...</p>
-      ) : (
-        <div className="room-detail">
-          <h1>{room.title.rendered}</h1>
-          <img src={room.acf?.preview_image} alt={room.title.rendered} />
-          <p>{room.acf?.full_description}</p>
-        </div>
-      )}
+      <div className="room-container">
+        {!room ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="room-detail">
+            <h1>{room.title.rendered}</h1>
+            <div
+              dangerouslySetInnerHTML={{ __html: room.acf?.full_description }}
+            />
+            <p>Rates from $ {room.acf?.room_price}</p>
+            <button className="book-btn">Book Now</button>
+            <img src={room.acf?.preview_image} alt={room.title.rendered} />
+          </div>
+        )}
+      </div>
     </>
   );
 }
