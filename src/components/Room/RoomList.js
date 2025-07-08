@@ -7,10 +7,13 @@ export default function RoomList() {
 
   useEffect(() => {
     fetch(
-      "https://headlessdemo3.wpenginepowered.com/wp-json/wp/v2/room?acf_format=standard"
+      "https://headlessdemo3.wpenginepowered.com/wp-json/wp/v2/room?acf_format=standard&per_page=100&_=${Date.now()}"
     )
       .then((res) => res.json())
-      .then((data) => setRooms(data));
+      .then((data) => {
+        console.log("Fetched rooms:", data);
+        setRooms(data);
+      });
   }, []);
 
   return (

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, matchPath } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import HambrgerMenu from "./HamburgerMenu";
 import "./Navbar.css";
@@ -8,6 +8,12 @@ const logo =
   "https://image-tc.galaxy.tf/wipng-60ozpe8mpwggi1hgo0qdy12in/therhyland-logo-wordmark-rgb-white.png?width=500";
 
 export default function Navbar() {
+  const location = useLocation();
+  const isRoomDetailPage = matchPath(
+    { path: "/rooms/:slug", end: true },
+    location.pathname
+  );
+
   const roomsLinks = [
     { label: "Rooms & Suites", path: "/rooms-suites" },
     { label: "Amenities", path: "/amenites" },
@@ -27,13 +33,15 @@ export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    if (isRoomDetailPage) return;
+
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isRoomDetailPage]);
 
   return (
     <nav className={scrollY > 0 ? "scrolled" : ""}>
