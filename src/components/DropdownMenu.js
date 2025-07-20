@@ -10,7 +10,6 @@ export default function DropdownMenu({ title, titleLink, items }) {
       <div className="dropdown-menu">
         {items.map(({ label, path }) => (
           <>
-            <div className="custom-divider"></div>
             <Link key={path} to={path} className="dropdown-item">
               {label}
             </Link>
