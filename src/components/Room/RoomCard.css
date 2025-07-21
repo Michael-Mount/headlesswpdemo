@@ -64,3 +64,18 @@
   font-family: "Golos Text", sans-serif;
   font-weight: 100;
 }
+
+@media only screen and (max-width: 768px) {
+  .room-card {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .room-rate {
+    border-left: none;
+  }
+
+  .room-image {
+    width: 100%;
+  }
+}
