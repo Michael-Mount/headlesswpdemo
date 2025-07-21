@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: black;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80vw;
+  width: 60vw;
   max-width: 350px;
   height: 100vh;
   background-color: black;
@@ -45,7 +45,7 @@
 }
 
 .mobile-overlay.open {
-  right: 0;
+  right: 70px;
 }
 
 .menu-header {
