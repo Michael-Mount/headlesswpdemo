@@ -7,7 +7,7 @@ import "./Navbar.css";
 const logo =
   "https://image-tc.galaxy.tf/wipng-60ozpe8mpwggi1hgo0qdy12in/therhyland-logo-wordmark-rgb-white.png?width=500";
 
-export default function Navbar() {
+export default function Navbar({ className = "" }) {
   /* Use to check endpoint */
   const location = useLocation();
 
@@ -49,7 +49,7 @@ export default function Navbar() {
   }, [isRoomDetailPage]);
 
   return (
-    <nav className={scrollY > 0 ? "scrolled" : ""}>
+    <nav className={scrollY > 0 ? `scrolled ${className}` : `${className}`}>
       <div className="nav-container">
         <div className="logo">
           <Link to="/">

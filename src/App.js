@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar.js";
+import MobileNavBar from "./components/MobileNavBar";
+import "./index.css";
 //Pages
 import Home from "./pages/Home";
 import Event from "./pages/Events.js";
@@ -20,7 +22,8 @@ import Stay from "./pages/Stay";
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar className="hidden md:block" />
+      <MobileNavBar className="flex md:hidden" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Event />} />
