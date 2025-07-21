@@ -1,3 +1,9 @@
+import MobileNavBar from "../components/MobileNavBar";
 export default function Packages() {
-  return <h1>Packages Page</h1>;
+  return (
+    <>
+      <MobileNavBar />
+      <h1>Packages</h1>
+    </>
+  );
 }
