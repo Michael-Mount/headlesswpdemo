@@ -1,3 +1,6 @@
+.double-border-wrapper {
+  padding: 130px;
+}
 .double-border-box {
   position: relative;
   width: 100%;
@@ -14,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border: 2px solid #000000;
+  border: 3px solid #000000;
   z-index: 1;
 }
 
@@ -75,38 +78,45 @@
   justify-content: center;
   align-items: start;
   text-align: center;
-  margin: 75px;
+  margin: 50px;
   padding: 35px;
   overflow: auto;
 }
 
 .double-border-intro {
-  font-family: "Golos Text", serif !important;
+  font-family: "Golos Text", serif;
   color: #000000;
-  width: 50%;
+  width: 85%;
   font-weight: 600;
 }
 
 .double-border-intro h2 {
-  font-size: 1.5em;
+  font-size: 55px;
+  font-family: "Antic Didone", serif;
   color: #000000;
   font-weight: 600;
-  margin-top: 50px;
+  text-transform: uppercase;
 }
 
 .double-border-intro .double-subheader {
-  font-size: 1em;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 .page-description {
   display: flex;
   text-align: start;
   gap: 20px;
+  font-size: 14px;
+  margin: 15px;
 }
 
 @media (max-width: 768px) {
+  .double-border-wrapper {
+    padding: 10px;
+  }
   .double-border-box {
-    flex-direction: column; /* Stack the content on mobile */
+    flex-direction: column;
     height: auto;
     padding: 15px;
   }
@@ -124,5 +134,9 @@
   .double-border-intro p {
     padding-right: 0px;
     padding-bottom: 0px;
+  }
+
+  .page-description {
+    flex-direction: column;
   }
 }
