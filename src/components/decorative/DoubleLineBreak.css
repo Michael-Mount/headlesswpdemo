@@ -1,0 +1,19 @@
+.topLine {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid black;
+  padding: 0;
+  margin-bottom: 10px;
+  width: 100vw;
+}
+
+.bottomLine {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 2px solid black;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}

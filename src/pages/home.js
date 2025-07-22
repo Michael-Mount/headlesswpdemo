@@ -2,6 +2,7 @@ import HeroImage from "../components/images/HeroImage";
 import DoubleBorderText from "../components/textBlocks/DoubleBorderText";
 import TallImageGallery from "../components/images/TallImageGallery";
 import BasicGhostButton from "../components/buttons/BasicGhostButton";
+import DoubleLineBreak from "../components/decorative/DoubleLineBreak";
 import "./Home.css";
 
 const heroImage =
@@ -39,6 +40,7 @@ export default function Home() {
         </p>
         <BasicGhostButton title="Discover Amenities" link="/amenities" />
       </div>
+      <DoubleLineBreak />
     </>
   );
 }
