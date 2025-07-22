@@ -1,6 +1,6 @@
 import "./DoubleBorderText.css";
 
-export default function DoubleBorderTextBlock({ content }) {
+export default function DoubleBorderText({ content }) {
   return (
     <>
       <div className="double-border-box">

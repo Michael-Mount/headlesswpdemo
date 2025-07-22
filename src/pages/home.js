@@ -1,8 +1,19 @@
 import HeroImage from "../components/images/HeroImage";
+import DoubleBorderText from "../components/textBlocks/DoubleBorderText";
 import TallImageGallery from "../components/images/TallImageGallery";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
+
+const doubleIntro = [
+  {
+    title: "Queen's New Standard",
+    subheader: "In Boutique hospitality",
+    left: "There’s something more here. Refined, unexpected, and alive with the kind of energy you only find when you know where to look. The Rhyland is redefining the Flushing skyline, offering serene moments tucked within the vibrant rhythm of the city, reserved for those who seek the extraordinary.",
+    right:
+      "Step inside and discover 200 thoughtfully designed guest rooms, a tranquil garden courtyard, and a rooftop restaurant that frames the city from an entirely new perspective. This is boutique hospitality, reimagined for Queens, and shared with those ready to experience it.",
+  },
+];
 
 const tallImages = [
   "https://image-tc.galaxy.tf/wipng-7kbpxgtw5ltkr8i4f8v62pd2n/untitled-design-18.png",
@@ -14,6 +25,7 @@ export default function Home() {
   return (
     <>
       <HeroImage image={heroImage} title="Coming Soon" />
+      <DoubleBorderText content={doubleIntro} />
       <TallImageGallery images={tallImages} />
     </>
   );
