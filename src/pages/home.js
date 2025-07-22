@@ -2,6 +2,7 @@ import HeroImage from "../components/images/HeroImage";
 import DoubleBorderText from "../components/textBlocks/DoubleBorderText";
 import TallImageGallery from "../components/images/TallImageGallery";
 import BasicGhostButton from "../components/buttons/BasicGhostButton";
+import "./Home.css";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
@@ -29,7 +30,7 @@ export default function Home() {
       <DoubleBorderText content={doubleIntro} />
       <TallImageGallery images={tallImages} />
       <div className="textBreak">
-        <p>Rhyland Lifestyle</p>
+        <h3> Rhyland Lifestyle</h3>
         <p>
           Sophisticated spaces thoughtfully designed for connection,
           celebration, and calm—from elegant event spaces to inspired culinary
