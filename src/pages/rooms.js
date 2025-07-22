@@ -1,7 +1,7 @@
 import "./Rooms.css";
-import HeroImage from "../components/HeroImage";
-import IntroTextBlock from "../components/IntroTextBlock";
-import TallImageGallery from "../components/TallImageGallery";
+import HeroImage from "../components/images/HeroImage.js";
+import IntroTextBlock from "../components/textBlocks/IntroTextBlock";
+import TallImageGallery from "../components/images/TallImageGallery.js";
 import RoomList from "../components/Room/RoomList";
 
 const heroImage =
