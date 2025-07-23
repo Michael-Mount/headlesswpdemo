@@ -41,3 +41,13 @@
 .center-text .basic-image-btn:hover {
   background-color: #000000;
 }
+
+@media (max-width: 768px) {
+  .basic-image-wrapper {
+    padding: 15px;
+  }
+
+  .center-text {
+    top: 50%;
+  }
+}

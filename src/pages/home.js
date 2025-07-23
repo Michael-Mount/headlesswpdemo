@@ -1,12 +1,12 @@
 //Page Style Guide
 import "./Home.css";
 //component imports
-import HeroImage from "../components/images/HeroImage";
+import HeroImage from "../components/features/HeroImage";
 import DoubleBorderText from "../components/textBlocks/DoubleBorderText";
-import TallImageGallery from "../components/images/TallImageGallery";
+import TallImageGallery from "../components/features/TallImageGallery";
 import BasicGhostButton from "../components/buttons/BasicGhostButton";
 import DoubleLineBreak from "../components/decorative/DoubleLineBreak";
-import BasicTextOverImage from "../components/images/BasicTextOverImage";
+import BasicTextOverImage from "../components/features/BasicTextOverImage";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
@@ -57,6 +57,7 @@ export default function Home() {
       </div>
       <DoubleLineBreak />
       <BasicTextOverImage content={basicImageOne} />
+      <DoubleLineBreak />
     </>
   );
 }
