@@ -23,7 +23,7 @@ const doubleIntro = [
   },
 ];
 
-const tallImages = [
+const tallImagesOne = [
   "https://image-tc.galaxy.tf/wipng-7kbpxgtw5ltkr8i4f8v62pd2n/untitled-design-18.png",
   "https://image-tc.galaxy.tf/wipng-367bql3yymdyd4qs6bc4qjehi/fandb.png",
   "https://image-tc.galaxy.tf/wipng-6cf4cnq0l5zq9mzjyz3aomds2/home.png",
@@ -56,12 +56,30 @@ const twoColumnContent = [
   },
 ];
 
+const tallImagesTwo = [
+  "https://image-tc.galaxy.tf/wipng-dv079otsmi5e8faj1qvuqh6ka/file.png?source=true",
+  "https://image-tc.galaxy.tf/wipng-cd11nnycd1chbc18z8zxsol5p/file.png?source=true",
+  "https://image-tc.galaxy.tf/wipng-536s7ov8aaxezh1jgjq85s9aj/masonry-interior-5.png",
+];
+
+const basicImageTwo = [
+  {
+    image:
+      "https://image-tc.galaxy.tf/wipng-7vpcah8jrjfd54iaep268bw53/file.png?source=true",
+    alt: "Lobby of the Rhyland Hotel",
+    title: "Event Spaces",
+    text: "A collection of elegant venues for intimate weddings, social gatherings, and corporate events, thoughtfullt curated to make every celebration feel extraordinary, whether indoors or beneath open skies.",
+    btn: "Step Inside",
+    link: "/gather",
+  },
+];
+
 export default function Home() {
   return (
     <>
       <HeroImage image={heroImage} title="Coming Soon" />
       <DoubleBorderText content={doubleIntro} />
-      <TallImageGallery images={tallImages} />
+      <TallImageGallery images={tallImagesOne} />
       <div className="textBreak">
         <h3> Rhyland Lifestyle</h3>
         <p>
@@ -77,6 +95,21 @@ export default function Home() {
       <DoubleLineBreak />
       <TwoColumnFeature content={twoColumnContent} />
       <DecoratedTextBanner text="Rhyland brings a new kind of stay to Queens — one that’s grounded, elevated, and quietly captivating. Step into a space designed to meet your rhythm, not the other way around." />
+      <DoubleLineBreak />
+      <TallImageGallery images={tallImagesTwo} />
+      <div className="textBreak">
+        <h3> Prime Location</h3>
+        <p>
+          See New York differently. Just minutes from Manhattan, The Rhyland
+          offers a fresh vantage point—where global culture, legendary cuisine,
+          and the electric energy of one of the city’s most dynamic
+          neighborhoods converge in the heart of Queens. With the subway steps
+          away, you’re effortlessly connected to everything the city has to
+          offer—without missing a moment of real New York.
+        </p>
+      </div>
+      <DoubleLineBreak />
+      <BasicTextOverImage content={basicImageTwo} />
     </>
   );
 }
