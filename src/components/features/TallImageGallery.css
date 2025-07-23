@@ -1,30 +1,37 @@
 .tallImageContainer {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 10px;
   width: 100%;
-  max-height: 900px;
+  height: 950px;
 }
 
 .tallImageWrapper {
   flex: 1;
+  height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .tallImageWrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 @media (max-width: 1024px) {
   .tallImageContainer {
     flex-direction: column;
-    max-height: none;
+    height: auto;
   }
 
   .tallImageWrapper {
     height: 60vh;
+  }
+
+  .tallImageWrapper img {
+    height: 100%;
   }
 }

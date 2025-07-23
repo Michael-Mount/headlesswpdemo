@@ -20,10 +20,11 @@
   align-items: center;
 }
 
-.Column-One,
-.Column-Two,
-img {
+.Column-One img,
+.Column-Two img {
   max-height: 560px;
+  max-width: 373px;
+  overflow: hidden;
 }
 
 .Content-Column {
@@ -49,7 +50,7 @@ img {
   }
 
   .Two-Column-Container {
-    flex-direction: column;
+    flex-direction: column !important;
     max-width: 100%;
     gap: 20px;
   }

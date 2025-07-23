@@ -19,7 +19,7 @@ export default function Navbar({ className = "" }) {
   /* array of props to send to Dropdown Compoent */
   const roomsLinks = [
     { label: "Rooms & Suites", path: "/rooms-suites" },
-    { label: "Amenities", path: "/amenites" },
+    { label: "Amenities", path: "/amenities" },
     { label: "Packages & Specials", path: "/packages-specials" },
   ];
   /* array of props to send to Dropdown Compoent */
