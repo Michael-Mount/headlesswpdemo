@@ -7,8 +7,15 @@ export default function TwoColumnFeature({ content }) {
     <>
       <div className="Two-Column-Wrapper">
         {content.map(
-          ({ image1, alt1, image2, alt2, header, text, btn, link }, i) => (
-            <div key={i} className="Two-Column-Container">
+          (
+            { image1, alt1, image2, alt2, header, text, btn, link, direction },
+            i
+          ) => (
+            <div
+              key={i}
+              className="Two-Column-Container"
+              style={{ flexDirection: direction }}
+            >
               <div className="Column-One">
                 <img src={image1} alt={alt1} />
               </div>

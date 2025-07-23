@@ -53,6 +53,7 @@ const twoColumnContent = [
     text: "At Honey & Ginger, rooftop dining captures the pulse of the city with elevated American fare rooted in local flavors, signature cocktails, and sweeping skyline views. By day, the rooftop comes alive with vibrant weekend brunches; by night, it transforms—live music, spirited conversation, and an open-air atmosphere made for lingering long after last call.",
     btn: "Discover Honey & Ginger",
     link: "/honey-ginger",
+    direction: "row",
   },
 ];
 
