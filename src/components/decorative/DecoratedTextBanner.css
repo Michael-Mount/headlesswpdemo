@@ -1,0 +1,36 @@
+.text-banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  text-align: center;
+}
+
+.square-marker {
+  width: 17px;
+  height: 17px;
+  background-color: #000000;
+  z-index: 2;
+}
+
+.text-banner-container .content {
+  font-family: "Golos Text", serif;
+  max-width: 800px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .text-banner-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .text-banner-container .content {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}

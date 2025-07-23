@@ -1,6 +1,7 @@
 .ghost-btn a {
   border: 1px solid black;
   padding: 15px 35px;
+  text-transform: uppercase;
 }
 
 .ghost-btn a:hover {

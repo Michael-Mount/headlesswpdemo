@@ -8,6 +8,7 @@ import BasicGhostButton from "../components/buttons/BasicGhostButton";
 import DoubleLineBreak from "../components/decorative/DoubleLineBreak";
 import BasicTextOverImage from "../components/features/BasicTextOverImage";
 import TwoColumnFeature from "../components/features/TwoColumnFeature";
+import DecoratedTextBanner from "../components/decorative/DecoratedTextBanner";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
@@ -75,6 +76,7 @@ export default function Home() {
       <BasicTextOverImage content={basicImageOne} />
       <DoubleLineBreak />
       <TwoColumnFeature content={twoColumnContent} />
+      <DecoratedTextBanner text="Rhyland brings a new kind of stay to Queens — one that’s grounded, elevated, and quietly captivating. Step into a space designed to meet your rhythm, not the other way around." />
     </>
   );
 }
