@@ -7,6 +7,7 @@ import TallImageGallery from "../components/features/TallImageGallery";
 import BasicGhostButton from "../components/buttons/BasicGhostButton";
 import DoubleLineBreak from "../components/decorative/DoubleLineBreak";
 import BasicTextOverImage from "../components/features/BasicTextOverImage";
+import TwoColumnFeature from "../components/features/TwoColumnFeature";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
@@ -39,6 +40,21 @@ const basicImageOne = [
   },
 ];
 
+const twoColumnContent = [
+  {
+    image1:
+      "https://image-tc.galaxy.tf/wipng-1gb8z7eezjuzc1iwgq3lznnxe/file.png?source=true",
+    alt1: "Close Up of a woman holding a whisky cocktail",
+    image2:
+      "https://image-tc.galaxy.tf/wipng-8v3g54hu04kaat3xk6oirykso/file.png?source=true",
+    alt2: "Two freashly plated steaks in artichocke sauce",
+    header: "Rooftop Dining",
+    text: "At Honey & Ginger, rooftop dining captures the pulse of the city with elevated American fare rooted in local flavors, signature cocktails, and sweeping skyline views. By day, the rooftop comes alive with vibrant weekend brunches; by night, it transforms—live music, spirited conversation, and an open-air atmosphere made for lingering long after last call.",
+    btn: "Discover Honey & Ginger",
+    link: "/honey-ginger",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -58,6 +74,7 @@ export default function Home() {
       <DoubleLineBreak />
       <BasicTextOverImage content={basicImageOne} />
       <DoubleLineBreak />
+      <TwoColumnFeature content={twoColumnContent} />
     </>
   );
 }
