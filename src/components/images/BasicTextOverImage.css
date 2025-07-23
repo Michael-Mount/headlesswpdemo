@@ -1,0 +1,43 @@
+.basic-image-wrapper {
+  padding: 185px;
+}
+
+.basic-image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Golos Text", serif;
+}
+
+.center-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-text .title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  margin-bottom: 40px;
+}
+
+.center-text .text {
+  font-size: 14px;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  margin-bottom: 40px;
+}
+
+.center-text .basic-image-btn {
+  font-size: 15px;
+  padding: 13px 32px;
+  background-color: #242424;
+  text-transform: uppercase;
+}
+
+.center-text .basic-image-btn:hover {
+  background-color: #000000;
+}

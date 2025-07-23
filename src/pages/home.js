@@ -1,9 +1,12 @@
+//Page Style Guide
+import "./Home.css";
+//component imports
 import HeroImage from "../components/images/HeroImage";
 import DoubleBorderText from "../components/textBlocks/DoubleBorderText";
 import TallImageGallery from "../components/images/TallImageGallery";
 import BasicGhostButton from "../components/buttons/BasicGhostButton";
 import DoubleLineBreak from "../components/decorative/DoubleLineBreak";
-import "./Home.css";
+import BasicTextOverImage from "../components/images/BasicTextOverImage";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
@@ -24,6 +27,18 @@ const tallImages = [
   "https://image-tc.galaxy.tf/wipng-6cf4cnq0l5zq9mzjyz3aomds2/home.png",
 ];
 
+const basicImageOne = [
+  {
+    image:
+      "https://image-tc.galaxy.tf/wijpeg-3k1mjculwjosukmuz4xsjaigq/file.jpg?source=true",
+    alt: "Double Queen Bedroom with modern fixtings",
+    title: "Stay with us",
+    text: "Get Acquainted with a most refined boutique hotel experience at The Rhyland",
+    btn: "Rooms & Suites",
+    link: "/rooms-suites",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -41,6 +56,7 @@ export default function Home() {
         <BasicGhostButton title="Discover Amenities" link="/amenities" />
       </div>
       <DoubleLineBreak />
+      <BasicTextOverImage content={basicImageOne} />
     </>
   );
 }
