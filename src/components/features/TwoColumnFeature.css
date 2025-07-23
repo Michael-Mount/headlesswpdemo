@@ -4,7 +4,6 @@
 
 .Two-Column-Container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: stretch;
   max-width: 1200px;
