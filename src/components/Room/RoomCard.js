@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./RoomCard.css";
 
+import GreyButton from "../buttons/GreyButton";
+
 export default function RoomCard({ room }) {
   return (
     <div className="room-card">
@@ -17,7 +19,7 @@ export default function RoomCard({ room }) {
       <div className="room-rate">
         <p>Rates from</p>
         <p className="price">${room.acf.room_price}</p>
-        <button className="card-btn">Book Now</button>
+        <GreyButton link="/" title="Book Now" />
       </div>
     </div>
   );

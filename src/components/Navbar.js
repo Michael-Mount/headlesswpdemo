@@ -11,9 +11,11 @@ export default function Navbar({ className = "" }) {
   /* Use to check endpoint */
   const location = useLocation();
 
-  const isDetailPage =
-    matchPath({ path: "/rooms/:slug", end: true }, location.pathname) ||
-    matchPath({ path: "/packages/:slug", end: true }, location.pathname);
+  const isDetailPage = [
+    "/rooms/:slug",
+    "/packages/:slug",
+    "/events/:slug",
+  ].some((path) => matchPath({ path, end: true }, location.pathname));
 
   /* array of props to send to Dropdown Compoent */
   const roomsLinks = [
