@@ -1,14 +1,14 @@
 //Page Style Guide
 import "./Home.css";
 //component imports
-import HeroImage from "../components/features/HeroImage";
-import DoubleBorderText from "../components/textBlocks/DoubleBorderText";
-import TallImageGallery from "../components/features/TallImageGallery";
-import BasicGhostButton from "../components/buttons/BasicGhostButton";
-import DoubleLineBreak from "../components/decorative/DoubleLineBreak";
-import BasicTextOverImage from "../components/features/BasicTextOverImage";
-import TwoColumnFeature from "../components/features/TwoColumnFeature";
-import DecoratedTextBanner from "../components/decorative/DecoratedTextBanner";
+import HeroImage from "../../components/features/HeroImage";
+import DoubleBorderText from "../../components/textBlocks/DoubleBorderText";
+import TallImageGallery from "../../components/features/TallImageGallery";
+import BasicGhostButton from "../../components/buttons/BasicGhostButton";
+import DoubleLineBreak from "../../components/decorative/DoubleLineBreak";
+import BasicTextOverImage from "../../components/features/BasicTextOverImage";
+import TwoColumnFeature from "../../components/features/TwoColumnFeature";
+import DecoratedTextBanner from "../../components/decorative/DecoratedTextBanner";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";

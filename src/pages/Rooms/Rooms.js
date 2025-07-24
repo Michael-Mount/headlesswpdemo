@@ -1,8 +1,8 @@
 import "./Rooms.css";
-import HeroImage from "../components/features/HeroImage.js";
-import IntroTextBlock from "../components/textBlocks/IntroTextBlock";
-import TallImageGallery from "../components/features/TallImageGallery";
-import RoomList from "../components/Room/RoomList";
+import HeroImage from "../../components/features/HeroImage.js";
+import IntroTextBlock from "../../components/textBlocks/IntroTextBlock.js";
+import TallImageGallery from "../../components/features/TallImageGallery.js";
+import RoomList from "../../components/Room/RoomList.js";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wijpeg-b6gaf5ztv5a9okah550rlpb5a/37-richouse-king-room.jpg";
