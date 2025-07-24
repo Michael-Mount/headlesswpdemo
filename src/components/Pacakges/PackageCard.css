@@ -41,6 +41,12 @@
   font-family: "Golos Text", sans-serif;
 }
 
+.package-book {
+  padding-left: 2rem;
+  padding-top: 4.5rem;
+  border-left: 1px solid #ccc;
+}
+
 @media only screen and (max-width: 768px) {
   .package-card {
     align-items: center;
@@ -49,5 +55,11 @@
 
   .package-image {
     width: 100%;
+  }
+
+  .package-book {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 0;
   }
 }
