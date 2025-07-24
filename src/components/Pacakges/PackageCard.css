@@ -1,0 +1,53 @@
+.package-card {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.package-image {
+  flex-shrink: 0;
+  width: 25%;
+  height: auto;
+}
+
+.package-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.package-content {
+  flex: 1;
+}
+
+.package-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 200;
+}
+
+.package-content a {
+  font-family: "Golos Text", sans-serif;
+  text-decoration: underline;
+  color: #626161;
+  font-size: 14px;
+}
+
+.package-content p {
+  margin-bottom: 1rem;
+  font-family: "Golos Text", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .package-card {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .package-image {
+    width: 100%;
+  }
+}

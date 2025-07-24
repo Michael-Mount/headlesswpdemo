@@ -12,6 +12,7 @@ import Gather from "./pages/Gather/Gather.js";
 import HoneyGinger from "./pages/HoneyGinger/HoneyGinger.js";
 import OurStory from "./pages/OurStory/OurStory.js";
 import Packages from "./pages/Packages/Packages.js";
+import PackageDetail from "./pages/Packages/PackageDetail";
 import RBar from "./pages/RBar/RBar.js";
 import RhylandRec from "./pages/RhylandRec/RhylandRec.js";
 import Rooms from "./pages/Rooms/Rooms";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/honey-ginger" element={<HoneyGinger />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/packages-specials" element={<Packages />} />
+        <Route path="/packages/:slug" element={<PackageDetail />} />
         <Route path="/rbar" element={<RBar />} />
         <Route path="/rhyland-recomandations" element={<RhylandRec />} />
         <Route path="/rooms-suites" element={<Rooms />} />

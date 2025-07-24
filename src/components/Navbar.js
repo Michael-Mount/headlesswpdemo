@@ -11,10 +11,9 @@ export default function Navbar({ className = "" }) {
   /* Use to check endpoint */
   const location = useLocation();
 
-  const isRoomDetailPage = matchPath(
-    { path: "/rooms/:slug", end: true },
-    location.pathname
-  );
+  const isDetailPage =
+    matchPath({ path: "/rooms/:slug", end: true }, location.pathname) ||
+    matchPath({ path: "/packages/:slug", end: true }, location.pathname);
 
   /* array of props to send to Dropdown Compoent */
   const roomsLinks = [
@@ -38,7 +37,7 @@ export default function Navbar({ className = "" }) {
 
   /* useEffect to trigger scroll animation */
   useEffect(() => {
-    if (isRoomDetailPage) return;
+    if (isDetailPage) return;
 
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -46,7 +45,7 @@ export default function Navbar({ className = "" }) {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isRoomDetailPage]);
+  }, [isDetailPage]);
 
   return (
     <nav className={scrollY > 0 ? `scrolled ${className}` : `${className}`}>

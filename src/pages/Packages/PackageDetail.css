@@ -1,0 +1,47 @@
+.package-container {
+  padding: 120px;
+}
+
+.package-container h1 {
+  font-size: 50px;
+  font-family: "Antic Didone", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.package-detail {
+  display: flex;
+  gap: 80px;
+}
+
+.package-text {
+  font-size: 14px;
+  font-family: "Golos Text", serif;
+  font-weight: 400;
+}
+
+.package-detail img {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .package-container {
+    padding: 20px;
+  }
+
+  .package-detail {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .package-container h1 {
+    font-size: 30px;
+    margin-top: 60px;
+  }
+
+  .package-detail img {
+    width: 100%;
+  }
+}
