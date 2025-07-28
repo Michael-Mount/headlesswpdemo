@@ -3,7 +3,7 @@ import "./Amenities.css";
 import HeroImage from "../../components/features/HeroImage";
 import IntroTextBlock from "../../components/textBlocks/IntroTextBlock";
 import TallImageGallery from "../../components/features/TallImageGallery";
-import DoubleLineBreak from "../../components/decorative/DecoratedTextBanner";
+import DoubleLineBreak from "../../components/decorative/DoubleLineBreak";
 import TwoColumnFeature from "../../components/features/TwoColumnFeature";
 
 const heroImage =

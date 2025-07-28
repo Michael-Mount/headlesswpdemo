@@ -1,0 +1,54 @@
+.Text-And-Image-Block {
+  padding: 130px 0px;
+}
+
+.Text-And-Image-Container {
+  display: flex;
+  height: 572px;
+  align-items: center;
+  gap: 10px;
+}
+
+.Text-And-Image-Container .Image-Container {
+  width: 70%;
+  height: 100%;
+}
+
+.Text-And-Image-Container .Image-Container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Text-And-Image-Container .Text-Container {
+  width: 30%;
+  text-align: center;
+  font-family: "Golos Text", serif;
+}
+
+.Text-And-Image-Container .Text-Container h2 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .Text-And-Image-Block {
+    padding: 30px 20px;
+  }
+
+  .Text-And-Image-Container {
+    flex-direction: column;
+  }
+
+  .Text-And-Image-Container .Image-Container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Text-And-Image-Container .Text-Container {
+    width: 100%;
+    text-align: center;
+  }
+}
