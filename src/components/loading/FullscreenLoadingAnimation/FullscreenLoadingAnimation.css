@@ -1,0 +1,70 @@
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease, visibility 1s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.loaderEmblem {
+  width: 100px;
+  height: 100px;
+  transition: transform 1s ease;
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+.stop-spin {
+  animation: none;
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+}
+
+.logo-transition {
+  transform: translateX(-80px);
+}
+
+.welcome-text {
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 1s ease;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
