@@ -1,0 +1,73 @@
+.tallImageContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  height: 950px;
+  padding-bottom: 80px;
+}
+
+.tallImageWrapper {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tallImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.tallImageWrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.center-text .title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  margin-bottom: 40px;
+}
+
+.center-text .text {
+  font-size: 14px;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+  .tallImageContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .tallImageWrapper {
+    height: 60vh;
+  }
+
+  .tallImageWrapper img {
+    height: 100%;
+  }
+}

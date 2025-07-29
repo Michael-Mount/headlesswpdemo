@@ -23,10 +23,7 @@ export default function Navbar({ className = "" }) {
     { label: "Amenities", path: "/amenities" },
     { label: "Packages & Specials", path: "/packages-specials" },
   ];
-  /* array of props to send to Dropdown Compoent */
-  const sceneLinks = [
-    { label: "Rhyland Recommends", path: "/rhyland-recomandations" },
-  ];
+
   /* array of props to send to Hamburger Menu Compoent */
   const hamLinks = [
     { label: "Contact & FAQ", path: "/contact" },
@@ -74,11 +71,7 @@ export default function Navbar({ className = "" }) {
             <Link to="/gather">Gather</Link>
           </li>
           <li>
-            <DropdownMenu
-              title="scene"
-              titleLink="/the-scene"
-              items={sceneLinks}
-            />
+            <Link to="/the-scene">Scene </Link>
           </li>
           <li>
             <HambrgerMenu items={hamLinks} />
