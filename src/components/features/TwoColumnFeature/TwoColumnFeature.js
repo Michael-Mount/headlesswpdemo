@@ -1,6 +1,6 @@
 import "./TwoColumnFeature.css";
 
-import BasicGhostButton from "../buttons/BasicGhostButton";
+import BasicGhostButton from "../../buttons/BasicGhostButton/BasicGhostButton";
 
 export default function TwoColumnFeature({ content }) {
   return (

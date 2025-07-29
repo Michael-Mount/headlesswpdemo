@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./PackageCard.css";
 
-import GreyButton from "../buttons/GreyButton";
+import GreyButton from "../buttons/GreyButton/GreyButton";
 
 export default function PackageCard({ pkg }) {
   return (

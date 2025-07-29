@@ -1,7 +1,7 @@
 import "./Packages.css";
 
-import HeroImage from "../../components/features/HeroImage";
-import IntroTextBlock from "../../components/textBlocks/IntroTextBlock";
+import HeroImage from "../../components/features/HeroImage/HeroImage";
+import IntroTextBlock from "../../components/textBlocks/IntroTextBlock/IntroTextBlock";
 import PackageList from "../../components/Pacakges/PackageList";
 
 const heroImage =

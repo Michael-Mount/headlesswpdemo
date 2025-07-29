@@ -1,10 +1,10 @@
-import HeroImage from "../../components/features/HeroImage";
-import DoubleBorderText from "../../components/textBlocks/DoubleBorderText";
-import TallImageGallery from "../../components/features/TallImageGallery";
-import DoubleLineBreak from "../../components/decorative/DoubleLineBreak";
-import TextAndImageBlock from "../../components/features/TextAndImageBlock";
-import DecoratedTextBanner from "../../components/decorative/DecoratedTextBanner";
-import TwoColumnFeature from "../../components/features/TwoColumnFeature";
+import HeroImage from "../../components/features/HeroImage/HeroImage";
+import DoubleBorderText from "../../components/textBlocks/DoubleBorderText/DoubleBorderText";
+import TallImageGallery from "../../components/features/TallImageGallery/TallImageGallery";
+import DoubleLineBreak from "../../components/decorative/DoubleLineBreak/DoubleLineBreak";
+import TextAndImageBlock from "../../components/features/TextAndImageBlock/TextAndImageBlock";
+import DecoratedTextBanner from "../../components/decorative/DecoratedTextBanned/DecoratedTextBanner";
+import TwoColumnFeature from "../../components/features/TwoColumnFeature/TwoColumnFeature";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wijpeg-7k03mq840pwecbv1zpuk2ext7/file.jpg?source=true";

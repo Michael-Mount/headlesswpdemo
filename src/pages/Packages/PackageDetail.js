@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./PackageDetail.css";
 
-import GreyButton from "../../components/buttons/GreyButton";
+import GreyButton from "../../components/buttons/GreyButton/GreyButton";
 
 export default function PackageDetail() {
   const { slug } = useParams();

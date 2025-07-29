@@ -1,9 +1,9 @@
 import "./Gather.css";
 
-import HeroImage from "../../components/features/HeroImage";
-import DoubleBorderText from "../../components/textBlocks/DoubleBorderText";
-import TallImageBtnOverlay from "../../components/features/TallImageBtnOverlay";
-import GreyButton from "../../components/buttons/GreyButton";
+import HeroImage from "../../components/features/HeroImage/HeroImage";
+import DoubleBorderText from "../../components/textBlocks/DoubleBorderText/DoubleBorderText";
+import TallImageBtnOverlay from "../../components/features/TallImageBtnOverlay/TallImageBtnOverlay";
+import GreyButton from "../../components/buttons/GreyButton/GreyButton";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-68eun8mrv2wo8t3aibcri8wxy/file.png?source=true";

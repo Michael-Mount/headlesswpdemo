@@ -1,10 +1,10 @@
 import "./Amenities.css";
 
-import HeroImage from "../../components/features/HeroImage";
-import IntroTextBlock from "../../components/textBlocks/IntroTextBlock";
-import TallImageGallery from "../../components/features/TallImageGallery";
-import DoubleLineBreak from "../../components/decorative/DoubleLineBreak";
-import TwoColumnFeature from "../../components/features/TwoColumnFeature";
+import HeroImage from "../../components/features/HeroImage/HeroImage";
+import IntroTextBlock from "../../components/textBlocks/IntroTextBlock/IntroTextBlock";
+import TallImageGallery from "../../components/features/TallImageGallery/TallImageGallery";
+import DoubleLineBreak from "../../components/decorative/DoubleLineBreak/DoubleLineBreak";
+import TwoColumnFeature from "../../components/features/TwoColumnFeature/TwoColumnFeature";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-2xddgiqkx5jxbwu7fwqbjrwn8/file.png?source=true";

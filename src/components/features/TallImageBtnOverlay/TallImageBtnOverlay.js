@@ -1,6 +1,6 @@
 import "./TallImageBtnOverlay.css";
 
-import GreyButton from "../buttons/GreyButton";
+import GreyButton from "../../buttons/GreyButton/GreyButton";
 
 export default function TallImageGallery({ content }) {
   return (

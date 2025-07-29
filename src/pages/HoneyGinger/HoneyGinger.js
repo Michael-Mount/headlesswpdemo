@@ -1,12 +1,12 @@
 import "./HoneyGinger.css";
 
-import HeroImage from "../../components/features/HeroImage";
-import DoubleBorderText from "../../components/textBlocks/DoubleBorderText";
-import TallImageGallery from "../../components/features/TallImageGallery";
-import BasicGhostButton from "../../components/buttons/BasicGhostButton";
-import DoubleLineBreak from "../../components/decorative/DoubleLineBreak";
-import TextAndImageBlock from "../../components/features/TextAndImageBlock";
-import DecoratedTextBanner from "../../components/decorative/DecoratedTextBanner";
+import HeroImage from "../../components/features/HeroImage/HeroImage";
+import DoubleBorderText from "../../components/textBlocks/DoubleBorderText/DoubleBorderText";
+import TallImageGallery from "../../components/features/TallImageGallery/TallImageGallery";
+import BasicGhostButton from "../../components/buttons/BasicGhostButton/BasicGhostButton";
+import DoubleLineBreak from "../../components/decorative/DoubleLineBreak/DoubleLineBreak";
+import TextAndImageBlock from "../../components/features/TextAndImageBlock/TextAndImageBlock";
+import DecoratedTextBanner from "../../components/decorative/DecoratedTextBanned/DecoratedTextBanner";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wijpeg-3fndtzm3a1krr5d3lccyoldm5/file.jpg?source=true&download=true";

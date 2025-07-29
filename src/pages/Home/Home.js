@@ -1,14 +1,14 @@
 //Page Style Guide
 import "./Home.css";
 //component imports
-import HeroImage from "../../components/features/HeroImage";
-import DoubleBorderText from "../../components/textBlocks/DoubleBorderText";
-import TallImageGallery from "../../components/features/TallImageGallery";
-import BasicGhostButton from "../../components/buttons/BasicGhostButton";
-import DoubleLineBreak from "../../components/decorative/DoubleLineBreak";
-import BasicTextOverImage from "../../components/features/BasicTextOverImage";
-import TwoColumnFeature from "../../components/features/TwoColumnFeature";
-import DecoratedTextBanner from "../../components/decorative/DecoratedTextBanner";
+import HeroImage from "../../components/features/HeroImage/HeroImage";
+import DoubleBorderText from "../../components/textBlocks/DoubleBorderText/DoubleBorderText";
+import TallImageGallery from "../../components/features/TallImageGallery/TallImageGallery";
+import BasicGhostButton from "../../components/buttons/BasicGhostButton/BasicGhostButton";
+import DoubleLineBreak from "../../components/decorative/DoubleLineBreak/DoubleLineBreak";
+import BasicTextOverImage from "../../components/features/BasicTextOverImage/BasicTextOverImage";
+import TwoColumnFeature from "../../components/features/TwoColumnFeature/TwoColumnFeature";
+import DecoratedTextBanner from "../../components/decorative/DecoratedTextBanned/DecoratedTextBanner";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";

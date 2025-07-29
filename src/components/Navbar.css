@@ -35,6 +35,7 @@ nav.scrolled {
 
 .logo a:hover {
   background-color: transparent;
+  color: #242424;
   padding: 0;
 }
 
@@ -56,8 +57,13 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  color: rgb(84, 84, 84);
+}
+
 nav ul li:hover {
   background-color: black;
+  color: #242424;
 }
 
 nav a:visited {
@@ -73,8 +79,4 @@ nav a:visited {
   font-family: "Golos Text", sans-serif;
   font-size: 15px;
   text-transform: uppercase;
-}
-
-.book-btn:hover {
-  background-color: #000000;
 }
