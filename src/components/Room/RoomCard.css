@@ -42,6 +42,7 @@
 }
 
 .room-rate {
+  padding-top: 3rem;
   padding-left: 2rem;
   border-left: 1px solid #ccc;
   text-align: center;
