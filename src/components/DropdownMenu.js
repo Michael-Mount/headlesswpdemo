@@ -9,11 +9,9 @@ export default function DropdownMenu({ title, titleLink, items }) {
       </Link>
       <div className="dropdown-menu">
         {items.map(({ label, path }) => (
-          <>
-            <Link key={path} to={path} className="dropdown-item">
-              {label}
-            </Link>
-          </>
+          <Link key={path} to={path} className="dropdown-item">
+            {label}
+          </Link>
         ))}
       </div>
     </div>

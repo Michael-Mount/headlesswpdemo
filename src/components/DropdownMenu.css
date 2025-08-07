@@ -15,8 +15,8 @@
   border: none;
   white-space: nowrap;
   z-index: 100;
-  right: -138px;
-  top: 43px;
+  right: 0;
+  top: 100%;
 }
 
 .arrow {

@@ -19,7 +19,6 @@ export default function TallImageGallery({ images }) {
           trigger: tallImageRef.current,
           start: "top 50%",
           scrub: true,
-          markers: true,
         },
       });
     });
