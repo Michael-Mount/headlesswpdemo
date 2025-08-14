@@ -21,6 +21,7 @@ const Rooms = lazy(() => import("./pages/Rooms/Rooms.js"));
 const RoomDetail = lazy(() => import("./pages/Rooms/RoomDetail.js"));
 const Scene = lazy(() => import("./pages/Scene/Scene.js"));
 const Stay = lazy(() => import("./pages/Stay/Stay.js"));
+const DemoPage = lazy(() => import("./pages/DemoPage/DemoPage.js"));
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -52,6 +53,7 @@ function App() {
               <Route path="/rooms/:slug" element={<RoomDetail />} />
               <Route path="/the-scene" element={<Scene />} />
               <Route path="/stay" element={<Stay />} />
+              <Route path="/demopage" element={<DemoPage />} />
               <Route path="*" element={<div>Page Not Found</div>} />
             </Routes>
           </Suspense>

@@ -3,9 +3,7 @@ import { Link, useLocation, matchPath } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import HambrgerMenu from "./HamburgerMenu";
 import "./Navbar.css";
-
-const logo =
-  "https://image-tc.galaxy.tf/wipng-60ozpe8mpwggi1hgo0qdy12in/therhyland-logo-wordmark-rgb-white.png?width=500";
+import logo from "../images/mm-logo.png";
 
 export default function Navbar({ className = "" }) {
   /* Use to check endpoint */
