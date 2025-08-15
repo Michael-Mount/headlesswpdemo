@@ -1,0 +1,85 @@
+.text-break {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+  bottom: 100px;
+  left: 125px;
+}
+
+.rail-head {
+  width: 2px;
+  background: black;
+  height: 160px;
+}
+
+.rail-text {
+  writing-mode: vertical-lr;
+  letter-spacing: 0.35em;
+  font-size: 20px;
+  color: black;
+}
+
+.text-break-copy {
+  margin: 25px;
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-break-copy h2 {
+  font-size: 40px;
+  padding-top: 70px;
+  padding-right: 40px;
+  border-right: 2px solid black;
+  height: 50%;
+}
+
+.text-break-copy p {
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  .rail {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+  }
+  .text-break {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rail-head {
+    display: none;
+  }
+
+  .rail-text {
+    writing-mode: inherit;
+  }
+
+  .text-break-copy {
+    flex-direction: column;
+  }
+
+  .text-break-copy h2 {
+    padding: 0;
+    border-right: none;
+    height: 0%;
+  }
+
+  .text-break-copy p {
+    width: 100%;
+  }
+}

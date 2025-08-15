@@ -1,7 +1,15 @@
+import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
+import gsap from "gsap";
+
 import HeroImage from "../../components/features/HeroImage/HeroImage";
 import CenteredTextBlock from "../../components/textBlocks/CenteredTextBlock/CenteredTextBlock";
 import ThreeImageGallery from "../../components/features/ThreeImageGallery/ThreeImageGallery";
 import Sushi from "../../images/susui.mp4";
+
+import "./DemoPage.css";
 
 const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
@@ -18,14 +26,76 @@ const threeGallery = {
 };
 
 const DemoPage = () => {
+  const root = useRef(null);
+  const headerRef = useRef(null);
+  const textBreak = useRef(null);
+
+  const ismobile = useMediaQuery({ maxWidth: 767 });
+
+  useGSAP(
+    () => {
+      const startValue = ismobile ? "top 50%" : "top 80%";
+      const endValue = ismobile ? "120% top" : "bottom 20%";
+
+      const headerSplit = new SplitText(headerRef.current, {
+        type: "chars, words",
+      });
+      const split = new SplitText(textBreak.current, { type: "lines" });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: textBreak.current,
+          start: startValue,
+          end: endValue,
+          markers: true,
+        },
+      });
+
+      tl.from(".rail", { opacity: 0, y: 200, duration: 1.25 }, 0);
+
+      tl.from(headerSplit.chars, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 1.8,
+        ease: "expo.out",
+        stagger: 0.06,
+      });
+
+      tl.from(split.lines, {
+        opacity: 0,
+        yPercent: 100,
+        duration: 1.5,
+        ease: "expo.out",
+        stagger: 0.04,
+      });
+      return () => split.revert();
+    },
+    { scope: root }
+  );
+
   return (
-    <div>
+    <div ref={root}>
       <HeroImage image={heroImage} title="" />
       <CenteredTextBlock content={introText} />
       <ThreeImageGallery gallery={threeGallery} />
-      <div>
-        <h2>hello</h2>
-      </div>
+      <section className="text-break">
+        <aside className="rail">
+          <span className="rail-head"></span>
+          <span className="rail-text">ROOMS & SUITES</span>
+        </aside>
+        <div className="text-break-copy">
+          <h2 className="text-break-title" ref={headerRef}>
+            THE MOUNTAINTOP
+          </h2>
+          <p ref={textBreak}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis
+            mollis odio. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin quis mollis odio. Interdum et malesuada fames ac ante ipsum
+            primis in faucibus.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,9 +1,15 @@
 import { Suspense, lazy, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import { ScrollTrigger, SplitText } from "gsap/all";
+import gsap from "gsap";
+
 import Navbar from "./components/Navbar.js";
 import MobileNavBar from "./components/MobileNavBar";
 import FullscreenLoader from "./components/loading/FullscreenLoadingAnimation/FullscreenLoadingAnimation";
 import "./index.css";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
 // Lazy load each page
 const Home = lazy(() => import("./pages/Home/Home.js"));
 const Event = lazy(() => import("./pages/Events/Events.js"));

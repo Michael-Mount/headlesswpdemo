@@ -46,4 +46,8 @@
   .image-column-2 img {
     height: auto;
   }
+
+  .image-column-1 .bottom-half {
+    width: 100%;
+  }
 }
