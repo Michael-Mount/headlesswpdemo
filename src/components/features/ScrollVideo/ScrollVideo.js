@@ -120,8 +120,8 @@ export default function ScrollVideo() {
         className="pointer-events-none absolute inset-0 flex items-center justify-center p-8"
         style={{ opacity: 0, willChange: "transform, opacity" }}
       >
-        <h2 className="text-white text-3xl md:text-9xl font-semibold drop-shadow-xl text-center max-w-8xl">
-          In the Heart of Queens
+        <h2 className="text-white text-3xl md:text-9xl font-semibold drop-shadow-xl text-center max-w-8xl uppercase">
+          In the Heart of Denver
         </h2>
       </div>
     </section>
