@@ -18,50 +18,81 @@ export default function ThreeImageGallery({ gallery }) {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: root.current,
-          start: "top 80%",
-          end: "bottom 20%",
-        },
+      const targets = gsap.utils.toArray(".ThreeImageGallery .reveal");
+      gsap.set(targets, { autoAlpha: 0, y: 24 });
+
+      ScrollTrigger.batch(targets, {
+        start: "top 80%",
+        onEnter: (batch) =>
+          gsap.to(batch, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1.25,
+            stagger: 0.5,
+            ease: "power2.out",
+          }),
+        onLeaveBack: (batch) =>
+          gsap.to(batch, {
+            autoAlpha: 0,
+            y: 24,
+            duration: 0.35,
+            stagger: 0.1,
+          }),
       });
 
-      tl.fromTo(
-        ".ThreeImageGallery-Wrapper img, .ThreeImageGallery-Wrapper video",
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 0.8,
-          stagger: { each: 0.5, from: "start", ease: "power2.inOut" },
-        }
-      );
+      const videos = gsap.utils.toArray(".ThreeImageGallery video");
+      videos.forEach((v) => {
+        ScrollTrigger.create({
+          trigger: v,
+          start: "top 85%",
+          end: "bottom 15%",
+          onEnter: () => {
+            v.playbackRate = 0.65;
+            v.play().catch(() => {});
+            gsap.to(v, { autoAlpha: 1, duration: 0.4, overwrite: "auto" });
+          },
+          onLeave: () => v.pause(),
+          onEnterBack: () => v.play().catch(() => {}),
+          onLeaveBack: () => v.pause(),
+        });
+      });
+
+      ScrollTrigger.refresh();
     },
     { scope: root }
   );
 
   return (
     <>
-      <div ref={root}>
+      <div ref={root} className="ThreeImageGallery">
         <div className="ThreeImageGallery-Wrapper">
-          <div className="image-column-1">
-            <img
-              src={gallery.image1}
-              alt="Decorative Gallery 1"
-              className="top"
-            />
-            <video
-              ref={videoRef}
-              className="bottom-half"
-              src={gallery.video} // or "/susui.mp4" if in public
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-            ></video>
+          <div className="col-left">
+            <div className="topWrap">
+              <img
+                className="reveal"
+                src={gallery.image1}
+                alt="Decorative Gallery 1"
+              />
+            </div>
+            <div className="bottomWrap">
+              <video
+                ref={videoRef}
+                className="reveal"
+                src={gallery.video}
+                loop
+                muted
+                playsInline
+                preload="metadata"
+              />
+            </div>
           </div>
-          <div className="image-column-2">
-            <img src={gallery.image2} alt="Decorative Gallery 2" />
+
+          <div className="col-right">
+            <img
+              className="reveal"
+              src={gallery.image2}
+              alt="Decorative Gallery 2"
+            />
           </div>
         </div>
       </div>

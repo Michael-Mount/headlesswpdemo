@@ -2,12 +2,15 @@
   display: flex;
   align-content: center;
   padding: 100px;
-  margin: 0 250px;
+  margin: 0 300px;
 }
 
 .CenteredTextBlock-Wrapper p {
   font-size: 27px;
   text-align: center;
+  color: #a09f98;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
 }
 
 @media (max-width: 768px) {

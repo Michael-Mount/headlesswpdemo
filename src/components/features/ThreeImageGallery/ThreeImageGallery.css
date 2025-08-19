@@ -1,53 +1,82 @@
+/* Outer section: gives the block a predictable height you can shrink */
+.ThreeImageGallery {
+  --gallery-h: clamp(360px, 100vh, 750px);
+  height: var(--gallery-h);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #f7f5f4;
+}
+
+/* Two columns side-by-side */
 .ThreeImageGallery-Wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  gap: 25px;
+  height: 100%;
+}
+
+/* Equal columns, prevent flex overflow issues */
+.col-left,
+.col-right {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Left column split vertically */
+.col-left {
+  display: flex;
+  flex-direction: column;
   gap: 25px;
 }
 
-.image-column-1 {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  align-content: stretch;
-  justify-items: stretch;
-  gap: 5px;
+/* Top ~62%, bottom ~38% of the left column */
+.topWrap {
+  flex: 0 0 62%;
+  min-height: 0;
+  display: flex;
+}
+.bottomWrap {
+  flex: 0 0 38%;
+  min-height: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.image-column-2 {
-  height: 100%;
-}
-
-.ThreeImageGallery-Wrapper img,
-.ThreeImageGallery-Wrapper video {
+/* Media fill their boxes and crop nicely */
+.topWrap img,
+.bottomWrap video,
+.col-right img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+/* Narrower video aligned to the right, full height of its row */
+.bottomWrap video {
+  width: 60%;
   object-fit: cover;
 }
 
-.image-column-1 .top {
-  height: 90%;
-}
-
-.image-column-1 .bottom-half {
-  width: 60%;
-  height: auto;
-  justify-self: end;
-  display: block;
-}
-
-.image-column-2 img {
-  height: 100%;
-}
-
+/* Mobile: stack and let height flow naturally */
 @media (max-width: 768px) {
-  .ThreeImageGallery-Wrapper {
-    grid-template-columns: 1fr;
+  .ThreeImageGallery {
     height: auto;
   }
-  .image-column-2 img {
-    height: auto;
+  .ThreeImageGallery-Wrapper {
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .image-column-1 .bottom-half {
+  .topWrap,
+  .bottomWrap {
+    flex: 0 0 auto;
+  }
+  .topWrap img,
+  .col-right img,
+  .bottomWrap video {
     width: 100%;
+    height: auto;
   }
 }

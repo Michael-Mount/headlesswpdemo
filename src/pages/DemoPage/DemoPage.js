@@ -8,6 +8,7 @@ import HeroImage from "../../components/features/HeroImage/HeroImage";
 import CenteredTextBlock from "../../components/textBlocks/CenteredTextBlock/CenteredTextBlock";
 import ThreeImageGallery from "../../components/features/ThreeImageGallery/ThreeImageGallery";
 import Sushi from "../../images/susui.mp4";
+import ScrollVideo from "../../components/features/ScrollVideo/ScrollVideo";
 
 import "./DemoPage.css";
 
@@ -15,8 +16,7 @@ const heroImage =
   "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
 
 const introText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis mollis odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Cras tristique dolor in arcu luctus dignissim. Nam ligula odio, auctor non aliquet vel, egestas vitae urna. Aenean in elit dui. Quisque euismod faucibus egestas.";
-
+  "As the former home of one of Denver’s most prominent families, Hotel Mountaintop incorporates the original architecture of the Hartness home into its design. The gracious and inviting retreat features 69 suites in the main hotel and four distinctive spa suites, each finely appointed in a fresh, contemporary motif. Additionally, Hotel Mountaintop offers a variety of event spaces to suit your needs.";
 const threeGallery = {
   image1:
     "https://image-tc.galaxy.tf/wipng-2xddgiqkx5jxbwu7fwqbjrwn8/file.png?source=true",
@@ -47,7 +47,6 @@ const DemoPage = () => {
           trigger: textBreak.current,
           start: startValue,
           end: endValue,
-          markers: true,
         },
       });
 
@@ -96,6 +95,8 @@ const DemoPage = () => {
           </p>
         </div>
       </section>
+      <ScrollVideo />
+      <CenteredTextBlock content={introText} />
     </div>
   );
 };
