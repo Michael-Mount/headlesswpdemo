@@ -10,6 +10,7 @@ import ThreeImageGallery from "../../components/features/ThreeImageGallery/Three
 import Sushi from "../../images/susui.mp4";
 import ScrollVideo from "../../components/features/ScrollVideo/ScrollVideo";
 import ShowcaseCarousel from "../../components/features/ShowcaseCarousel/ShowcaseCarousel";
+import TestimonialCarousel from "../../components/features/TestimonialsCarousel/TestimonialCarousel";
 
 import "./DemoPage.css";
 
@@ -96,13 +97,14 @@ const DemoPage = () => {
           </p>
         </div>
       </section>
-      <ScrollVideo />
+
       <div className="px-4 py-12">
         <ShowcaseCarousel
           height={560}
           autoPlayMs={0} // set e.g. 5500 to enable autoplay
         />
       </div>
+      <TestimonialCarousel />
     </div>
   );
 };
