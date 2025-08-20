@@ -11,6 +11,8 @@ import Sushi from "../../images/susui.mp4";
 import ScrollVideo from "../../components/features/ScrollVideo/ScrollVideo";
 import ShowcaseCarousel from "../../components/features/ShowcaseCarousel/ShowcaseCarousel";
 import TestimonialCarousel from "../../components/features/TestimonialsCarousel/TestimonialCarousel";
+import SplitFeature from "../../components/features/SplitFeature/SplitFeature";
+import InfiniteImageStrip from "../../components/features/InfiniteImageStrip/InfiniteImageStrip";
 
 import "./DemoPage.css";
 
@@ -25,6 +27,20 @@ const threeGallery = {
   image2:
     "https://image-tc.galaxy.tf/wipng-djs715wbf83fx4qsdp1vym4k7/file.png?source=true",
   video: Sushi,
+};
+
+const weddingSplit = {
+  img: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  title: "Weddings",
+  para: "Hotel Mountaintop offers a variety of indoor and outdoor venues that can be customized for small-to-medium-sized weddings, meetings, and special events, as well as a grand ballroom that can host up to 300 people.",
+  links: [{ label: "EXPLORE FURTHER", href: "#" }],
+};
+
+const spaSplit = {
+  img: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  title: "Spa M",
+  para: "Rounding out the guest experience is a luxurious spa with six treatment rooms. Its comprehensive menu of treatments creates a unique and replenishing spa getaway unlike anything in the Greenville area. ",
+  links: [{ label: "EXPLORE FURTHER", href: "#" }],
 };
 
 const DemoPage = () => {
@@ -104,7 +120,12 @@ const DemoPage = () => {
           autoPlayMs={0} // set e.g. 5500 to enable autoplay
         />
       </div>
+      <ScrollVideo />
       <TestimonialCarousel />
+      <SplitFeature />
+      <SplitFeature content={weddingSplit} />
+      <SplitFeature content={spaSplit} />
+      <InfiniteImageStrip />
     </div>
   );
 };

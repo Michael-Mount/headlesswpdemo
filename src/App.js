@@ -4,6 +4,7 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 
 import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
 import MobileNavBar from "./components/MobileNavBar";
 import FullscreenLoader from "./components/loading/FullscreenLoadingAnimation/FullscreenLoadingAnimation";
 import "./index.css";
@@ -63,6 +64,7 @@ function App() {
               <Route path="*" element={<div>Page Not Found</div>} />
             </Routes>
           </Suspense>
+          <Footer />
         </>
       )}
     </>

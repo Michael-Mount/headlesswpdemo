@@ -54,7 +54,7 @@ export default function FullscreenLoader({ onFinish }) {
           alt="Loader Emblem of Rhyland Hotel"
         />
         <h1 className={`welcome-text ${doneSpinning ? "slide-in" : ""}`}>
-          Welcome To The Rhyland Hotel
+          Welcome To The Mountaintop Hotel
         </h1>
       </div>
     </div>
