@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import "./FullscreenLoadingAnimation.css";
-
-const logo =
-  "https://image-tc.galaxy.tf/wisvg-a7qjuvwedebtj3jrcaz9ub3ew/file.svg?source=true";
+import logo from "../../../images/M logo.png";
 
 export default function FullscreenLoader({ onFinish }) {
   const [doneSpinning, setDoneSpinning] = useState(false);
