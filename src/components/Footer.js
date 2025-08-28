@@ -49,10 +49,10 @@ export default function Footer() {
             <span>72°F</span>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-gray-400">
+            <a href="#" className="hover:text-gray-300">
               <Facebook size={20} />
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="#" className="hover:text-gray-300">
               <Instagram size={20} />
             </a>
           </div>

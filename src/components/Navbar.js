@@ -27,6 +27,7 @@ export default function Navbar({ className = "" }) {
     { label: "Contact & FAQ", path: "/contact" },
     { label: "Our Story", path: "/our-story" },
     { label: "Employment", path: "/employment" },
+    { label: "Demopage", path: "/demopage" },
   ];
 
   /* useState to track if user has scrolled */

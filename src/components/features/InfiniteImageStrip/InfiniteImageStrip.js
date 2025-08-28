@@ -137,7 +137,7 @@ export default function InfiniteImageStrip({
   return (
     <div
       ref={wrapRef}
-      className={`relative w-full overflow-hidden m-8 ${className}`}
+      className={`relative w-full overflow-hidden m-7 ${className}`}
       style={{ height }}
       aria-label="Image showcase"
     >
