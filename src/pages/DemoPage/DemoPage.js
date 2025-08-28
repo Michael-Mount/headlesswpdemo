@@ -17,7 +17,7 @@ import InfiniteImageStrip from "../../components/features/InfiniteImageStrip/Inf
 import "./DemoPage.css";
 
 const heroImage =
-  "https://image-tc.galaxy.tf/wipng-5nlw8y2a0ddnvm9m8334u6ani/homepage2.png";
+  "https://images.unsplash.com/photo-1637440114401-3f312ca0161f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const introText =
   "As the former home of one of Denver’s most prominent families, Hotel Mountaintop incorporates the original architecture of the Hartness home into its design. The gracious and inviting retreat features 69 suites in the main hotel and four distinctive spa suites, each finely appointed in a fresh, contemporary motif. Additionally, Hotel Mountaintop offers a variety of event spaces to suit your needs.";
